@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1 id="heading1"></h1>
+        <P id="paragraph1"></P>
+        <p id="paragraph2"></p>
+        
+        <script>
+            var text1;
+            var text2;
+            var text3;
+            
+            var numA = 800;
+            var numB = 500;
+            
+            text1 = "Steve Biko Academic Hospital (Department of Health)";
+            text2 = "SBAH (DoH)";
+            text3 = " The Steve Biko Academic Hospital is a purely tertiary healthcare institution, rendering specialized and highly specialized services to medically referred patients. It is a referral hospital in that patients are referred to the institution by their local clinics";
+            
+            document.getElementById("heading1").innerHTML = (text1);
+            document.getElementById("paragraph1").innerHTML = (text2 + text3);
+            document.getElementById("paragraph2").innerHTML = (numA + " X " + numB + " = " + numA * numB);
+        </script>
+    </body>
+</html>

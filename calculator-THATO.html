@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="4">
+                <input type="text" id="inputBox" value="0">
+            </td>
+        </tr>
+        <tr>
+            <td class="digitButton" onclick="digitBtnPressed('7')">7</td>
+            <td class="digitButton" onclick="digitBtnPressed('8')">8</td>
+            <td class="digitButton" onclick="digitBtnPressed('9')">9</td>
+            <td class="operatorButton" onclick="operatorBtnPressed('x')">x</td>
+        </tr>
+        <tr>
+            <td class="digitButton" onclick="digitBtnPressed('4')">4</td>
+            <td class="digitButton" onclick="digitBtnPressed('5')">5</td>
+            <td class="digitButton" onclick="digitBtnPressed('6')">6</td>
+            <td class="operatorButton" onclick="operatorBtnPressed('-')">-</td>
+        </tr>
+        <tr>
+            <td class="digitButton" onclick="digitBtnPressed('1')">1</td>
+            <td class="digitButton" onclick="digitBtnPressed('2')">2</td>
+            <td class="digitButton" onclick="digitBtnPressed('3')">3</td>
+            <td class="operatorButton" onclick="operatorBtnPressed('+')">+</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="digitButton" onclick="digitBtnPressed('0')">0</td>
+            <td class="ACButton" onclick="btnACPressed()">AC</td>
+            <td class="operatorButton" onclick="operatorBtnPressed('/')">/</td>
+        </tr>
+        <tr>
+            <td class="operatorButton" colspan="4" onclick="equalsBtnPressed()">=</td>
+        </tr>
+    </table>
+
+    <script>
+        function digitBtnPressed(digit) {
+            var inputBox = document.getElementById("inputBox");
+            if (newLine) {
+                inputBox.value = digit;
+                newLine = false;
+            } else {
+                inputBox.value += digit;
+            }
+        }
+
+        function operatorBtnPressed(operator) {
+            // handle operator button press
+            console.log("Operator pressed: ", operator);
+        }
+
+        function btnACPressed() {
+            // Clear the calculator
+            document.getElementById("inputBox").value = "0";
+            newLine = true; 
+        }
+
+        function equalsBtnPressed() {
+            // display the results
+            console.log("Equals pressed");
+        }
+    </script>
+</body>
+</html>

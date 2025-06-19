@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <link rel="stylesheeet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1 id="heading" onclick="changeText()">Department of Health</h1>
+        <p  id="addition"></p>
+
+        <script>
+            document.getElementById("addition").innerHTML = addNumbers(90, 100);
+
+            function changeText(){
+                if(document.getElementById("heading").innerHTML=='Department of Health'){
+                    document.getElementById("heading").innerHTML='Steve Biko Academic Hospital'} 
+                    else {
+                        document.getElementById("heading").innerHTML='Department of Health'
+                    }
+            }
+            function addNumbers(num1, num2){
+                return num1 + num2;
+            }
+            
+        </script>
+    </body>
+</html>
